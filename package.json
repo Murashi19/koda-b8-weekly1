@@ -1,0 +1,24 @@
+{
+  "name": "tugas-weekly",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1#readme",
+  "bugs": {
+    "url": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhamadRafliShidiq/koda-b8-weekly1.git"
+  },
+  "license": "ISC",
+  "author": "muhamadraflishidiq",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node": "^22.22.3"
+  },
+  "devDependencies": {}
+}
