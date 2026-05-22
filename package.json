@@ -1,7 +1,7 @@
 {
 	"name": "tugas-weekly",
 	"version": "1.0.0",
-	"description": "",
+	"description": " Tugas Weekly 1 - Koda Bootcamp Batch 8 (Membuat Program Interactive Pemesanan Makanan)",
 	"homepage": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1#readme",
 	"bugs": {
 		"url": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1/issues"
@@ -19,9 +19,6 @@
 		"dev": "node --watch index.js",
 		"lint": "eslint index.js",
 		"lint:fix": "eslint index.js --fix"
-	},
-	"dependencies": {
-		"node": "^22.22.3"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
