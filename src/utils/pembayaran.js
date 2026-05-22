@@ -51,7 +51,8 @@ export async function payment(totalPrice) {
         return;
     }
     // Uang kurang
-    const remainingPayment = totalPrice - paymentAmount;
-    console.log(`\nUang Anda kurang Rp ${remainingPayment.toLocaleString("id-ID")}!`);
-    return payment(remainingPayment);
+    if (paymentAmount < totalPrice) {
+        console.log("\nUang Anda kurang!, silakan masukkan jumlah yang cukup.");
+        return payment(totalPrice);
+    }
 }
