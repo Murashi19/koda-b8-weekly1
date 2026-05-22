@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { input } from "./inputData.js";
 import { main } from "../../index.js";
 import { showReceipt } from "./pembayaran.js";

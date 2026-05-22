@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { daftarMenu, kategori } from './src/config/dataMenu.js';
 import { handleFoodOrder } from './src/utils/pesanMenu.js';
 import { input } from './src/utils/inputData.js';

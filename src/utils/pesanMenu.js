@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 import handleRepeatOrder from './repeatOrder.js';
 import { input } from "./inputData.js";
 
-let orderList = [];
+const orderList = [];
 let totalPrice = 0;
 
 function findMenuById(menuList, menuId) {

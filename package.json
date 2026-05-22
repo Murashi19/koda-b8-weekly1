@@ -1,24 +1,31 @@
 {
-  "name": "tugas-weekly",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1#readme",
-  "bugs": {
-    "url": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MuhamadRafliShidiq/koda-b8-weekly1.git"
-  },
-  "license": "ISC",
-  "author": "muhamadraflishidiq",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "node": "^22.22.3"
-  },
-  "devDependencies": {}
+	"name": "tugas-weekly",
+	"version": "1.0.0",
+	"description": "",
+	"homepage": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1#readme",
+	"bugs": {
+		"url": "https://github.com/MuhamadRafliShidiq/koda-b8-weekly1/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MuhamadRafliShidiq/koda-b8-weekly1.git"
+	},
+	"license": "ISC",
+	"author": "muhamadraflishidiq",
+	"type": "module",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "node --watch index.js",
+		"lint": "eslint index.js",
+		"lint:fix": "eslint index.js --fix"
+	},
+	"dependencies": {
+		"node": "^22.22.3"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"eslint": "^10.4.0",
+		"globals": "^17.6.0"
+	}
 }

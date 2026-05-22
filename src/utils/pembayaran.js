@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { input, closeInput } from "./inputData.js";
 
 export function showReceipt(orderList, totalPrice) {
