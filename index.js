@@ -23,17 +23,17 @@ const cart = {
 export async function main() {
     while (true) {
         try {
-            console.log("\n=================================");
-            console.log("        MENU RESTO LAZATTO");
-            console.log("=================================");
+            console.log('\n=================================');
+            console.log('        MENU RESTO LAZATTO');
+            console.log('=================================');
 
             kategori.forEach(({ id, nama }) => {
                 console.log(`${id}. ${nama}`);
             });
 
-            console.log("=================================");
+            console.log('=================================');
             // User Input Menu
-            const userInput = await input("Silahkan pilih menu (Nomor): ");
+            const userInput = await input('Silahkan pilih menu (Nomor): ');
             const selectedMenu = Number(userInput);
 
             // Validasi input
@@ -51,7 +51,7 @@ export async function main() {
             return;
         }
         catch (error) {
-            console.error("Terjadi kesalahan saat memilih menu: ", error.message);
+            console.error('Terjadi kesalahan saat memilih menu: ', error.message);
 
         }
     }

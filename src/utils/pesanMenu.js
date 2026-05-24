@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 import handleRepeatOrder from './repeatOrder.js';
-import { input } from "./inputData.js";
-import { validateInputOrder, validateInputQty } from "./validate.js";
+import { input } from './inputData.js';
+import { validateInputOrder, validateInputQty } from './validate.js';
 
 function findMenuById(menuList, menuId) {
     if (!menuList) {
@@ -22,11 +22,11 @@ export async function handleFoodOrder(menuList, categoryName, cart) {
             console.log(`\n===== KATEGORI: ${categoryName.toUpperCase()} =====`);
 
             menuList.forEach(({ id, nama, harga }) => {
-                console.log(`${id}. ${nama} - Rp.${harga.toLocaleString("id-ID")}`);
+                console.log(`${id}. ${nama} - Rp.${harga.toLocaleString('id-ID')}`);
             });
 
             // Input id menu
-            const menuIdInput = await input("\nPilih makanan (Nomor): ");
+            const menuIdInput = await input('\nPilih makanan (Nomor): ');
             console.log(menuIdInput);
             const selectedMenuId = Number(menuIdInput);
             // Validasi input id menu
@@ -35,12 +35,12 @@ export async function handleFoodOrder(menuList, categoryName, cart) {
             const selectedMenu = findMenuById(menuList, selectedMenuId);
             // Validasi jika menu tidak tersedia
             if (!selectedMenu) {
-                console.log("Menu tidak tersedia!");
+                console.log('Menu tidak tersedia!');
                 continue;
             }
 
             // Input jumlah beli
-            const quantityInput = await input("Jumlah beli: ");
+            const quantityInput = await input('Jumlah beli: ');
             console.log(quantityInput);
             const quantity = Number(quantityInput);
             // Validasi jumlah
@@ -66,16 +66,16 @@ export async function handleFoodOrder(menuList, categoryName, cart) {
                 existingOrder.subtotal += subTotal;
             }
 
-            console.log("\nPesanan berhasil ditambahkan!");
+            console.log('\nPesanan berhasil ditambahkan!');
             console.log(`Menu     : ${nama}`);
             console.log(`Jumlah   : ${quantity}`);
-            console.log(`Subtotal : Rp ${subTotal.toLocaleString("id-ID")}`);
-            console.log(`Total    : Rp ${cart.totalPrice.toLocaleString("id-ID")}`);
+            console.log(`Subtotal : Rp ${subTotal.toLocaleString('id-ID')}`);
+            console.log(`Total    : Rp ${cart.totalPrice.toLocaleString('id-ID')}`);
 
             await handleRepeatOrder(cart);
             return;
         } catch (error) {
-            console.error("Terjadi kesalahan saat memproses pesanan: ", error.message);
+            console.error('Terjadi kesalahan saat memproses pesanan: ', error.message);
         }
     }
 }
