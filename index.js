@@ -32,14 +32,14 @@ export async function main() {
             const { menuList, categoryName } = getSelectedCategory(dataMenu, kategori, selectedMenu);
 
             // Proses pemesanan makanan
-            await handleFoodOrder(menuList, categoryName, cart);
+            await handleFoodOrder(menuList, categoryName, cart, input);
 
             // Tanya user apakah ingin pesan lagi atau checkout
-            const action = await handleRepeatOrder();
+            const action = await handleRepeatOrder(input);
 
             // Checkout
             if (action === 'checkout') {
-                await handlePayment(cart);
+                await handlePayment(cart, input);
                 break;
             }
 

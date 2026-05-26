@@ -1,14 +1,12 @@
 /* eslint-disable no-console */
-import { input } from '../utils/inputData.js';
 import { validateInputOrder, validateInputQty } from '../utils/validate.js';
 import { findMenuById, addItemToCart } from '../services/orderService.js';
 import { showCategoryMenu } from '../ui/menuView.js';
 import { showOrderSuccess } from '../ui/orderView.js';
 
-export async function handleFoodOrder(menuList, categoryName, cart) {
+export async function handleFoodOrder(menuList, categoryName, cart, input) {
     while (true) {
         try {
-
             // Validasi menu
             if (!menuList || !categoryName) {
                 throw new Error('Kategori tidak ditemukan!');

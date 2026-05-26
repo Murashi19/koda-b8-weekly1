@@ -1,10 +1,9 @@
 /* eslint-disable no-console */
-import { input } from '../utils/inputData.js';
 import { validateReceipt, validatePayment } from '../utils/validate.js';
 import { calculateChange, isPaymentEnough } from '../services/paymentService.js';
 import { showReceipt, showPaymentSuccess, showPaymentFailed } from '../ui/paymentView.js';
 
-export async function handlePayment(cart) {
+export async function handlePayment(cart, input) {
 
     // Validasi keranjang sebelum pembayaran
     validateReceipt(cart.orderList);
