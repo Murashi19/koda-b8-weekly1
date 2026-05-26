@@ -1,21 +1,31 @@
-import { describe, it, mock, afterEach } from 'node:test';
+import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-
-const mockInput = mock.fn();
-// mock.module('../src/utils/inputData.js',
-//     { namedExports: { input: mockInput } }
-// );
-// const handleRepeatOrder = await import('../src/app/repeatOrderApp.js');
+import { handleRepeatOrder } from '../src/app/repeatOrderApp.js';
 
 describe('handleRepeatOrder', () => {
-    it('should return repeat when user input "y" or "ya"', async (t) => {
-        t.mock.module('../src/utils/inputData.js', {
-            nameExports: {
-                input: mockInput('ya')
-            }
-        });
-        const handleRepeatOrder = await import('../src/app/repeatOrderApp.js');
-        const result = await handleRepeatOrder();
+    it('should return repeat', async () => {
+        const fakeInput = async () => 'y';
+        const result = await handleRepeatOrder(fakeInput);
         assert.strictEqual(result, 'repeat');
     });
-})
+    it('should return checkout', async () => {
+        const fakeInput = async () => 't';
+        const result = await handleRepeatOrder(fakeInput);
+        assert.strictEqual(result, 'checkout');
+    });
+    it('should retry when invalid input', async () => {
+        let callCount = 1;
+        const fakeInput = async () => {
+            callCount++;
+            if (callCount === 1) {
+                return 'abc';
+            }
+            return 'y';
+        };
+
+        const result = await handleRepeatOrder(fakeInput);
+        assert.strictEqual(result, 'repeat');
+        assert.strictEqual(callCount, 2);
+    });
+}
+);
