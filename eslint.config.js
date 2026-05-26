@@ -27,6 +27,7 @@ export default defineConfig([
       'object-shorthand': 'error',
 
       'complexity': ['warn', { max: 10 }],
+      'parsing-error': ['warn', { fileExtension: '.js' }],
     }
   },
 ]);

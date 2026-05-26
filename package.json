@@ -18,7 +18,9 @@
 		"start": "node index.js",
 		"dev": "node --watch index.js",
 		"lint": "eslint .",
-		"lint:fix": "eslint . --fix"
+		"lint:fix": "eslint . --fix",
+		"test": "node --test",
+		"test:coverage": "node --test --experimental-test-coverage"
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
